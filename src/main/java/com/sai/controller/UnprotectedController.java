@@ -11,14 +11,14 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 public class UnprotectedController {
     @RequestMapping(value = "/unprotected", method = RequestMethod.GET)
-    public ModelAndView protectedGetUrl() {
+    public ModelAndView unprotectedGetUrl() {
         ModelAndView modelAndView = new ModelAndView("unprotected");
         modelAndView.addObject("nameRequest", new NameRequest());
         return modelAndView;
     }
 
     @RequestMapping(value = "/unprotected", method = RequestMethod.POST)
-    public ModelAndView protectedPostUrl(NameRequest nameRequest, RedirectAttributes redirectAttributes) {
+    public ModelAndView unprotectedPostUrl(NameRequest nameRequest, RedirectAttributes redirectAttributes) {
         String message = String.format("Your name is: %s %s", nameRequest.getFirst(), nameRequest.getLast());
         redirectAttributes.addFlashAttribute("message", message);
         return new ModelAndView(new RedirectView("/unprotected", true, true, false));
