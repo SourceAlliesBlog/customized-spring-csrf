@@ -23,7 +23,7 @@ public class ProtectedControllerTest {
     @Test
     public void protectedGet(){
         ModelAndView modelAndView = controller.protectedGetUrl();
-        assertEquals("protected", modelAndView.getViewName());
+        assertEquals("pages/protected", modelAndView.getViewName());
         assertTrue(modelAndView.getModel().get("nameRequest") instanceof NameRequest);
     }
 

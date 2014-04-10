@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.RedirectView;
 public class ProtectedController {
     @RequestMapping(value = "/protected", method = RequestMethod.GET)
     public ModelAndView protectedGetUrl() {
-        ModelAndView modelAndView = new ModelAndView("protected");
+        ModelAndView modelAndView = new ModelAndView("pages/protected");
         modelAndView.addObject("nameRequest", new NameRequest());
         return modelAndView;
     }

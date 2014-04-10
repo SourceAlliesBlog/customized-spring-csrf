@@ -8,19 +8,19 @@ import org.springframework.web.servlet.ModelAndView;
 public class LoginController {
     @RequestMapping("/login")
     public String login() {
-        return "login";
+        return "pages/login";
     }
 
     @RequestMapping("/login-fail")
     public ModelAndView loginFailure() {
-        ModelAndView modelAndView = new ModelAndView("login");
+        ModelAndView modelAndView = new ModelAndView("pages/login");
         modelAndView.addObject("errors", true);
         return modelAndView;
     }
 
     @RequestMapping("/logout")
     public ModelAndView logout() {
-        ModelAndView modelAndView = new ModelAndView("login");
+        ModelAndView modelAndView = new ModelAndView("pages/login");
         modelAndView.addObject("logout", true);
         return modelAndView;
     }

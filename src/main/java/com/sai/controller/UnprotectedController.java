@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.RedirectView;
 public class UnprotectedController {
     @RequestMapping(value = "/unprotected", method = RequestMethod.GET)
     public ModelAndView unprotectedGetUrl() {
-        ModelAndView modelAndView = new ModelAndView("unprotected");
+        ModelAndView modelAndView = new ModelAndView("pages/unprotected");
         modelAndView.addObject("nameRequest", new NameRequest());
         return modelAndView;
     }

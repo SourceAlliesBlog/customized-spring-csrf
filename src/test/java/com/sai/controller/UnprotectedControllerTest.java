@@ -25,7 +25,7 @@ public class UnprotectedControllerTest {
     @Test
     public void unprotectedGet(){
         ModelAndView modelAndView = controller.unprotectedGetUrl();
-        assertEquals("unprotected", modelAndView.getViewName());
+        assertEquals("pages/unprotected", modelAndView.getViewName());
         assertTrue(modelAndView.getModel().get("nameRequest") instanceof NameRequest);
     }
 
