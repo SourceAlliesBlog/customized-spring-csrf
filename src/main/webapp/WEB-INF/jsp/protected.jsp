@@ -72,8 +72,6 @@
             <form:form action="${protectedUrl}" class="form-horizontal" htmlEscape="true" modelAttribute="nameRequest"
                        method="POST">
 
-                <p><strong>Your token is ${_csrf.token}.</strong></p>
-
                 <fieldset>
                     <div class="form-group">
                         <label for="first" class="col-xs-4 col-sm-2 control-label">First Name</label>
