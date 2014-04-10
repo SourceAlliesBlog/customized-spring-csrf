@@ -66,7 +66,7 @@
                 </div>
             </c:if>
 
-            <form:form action="${protectedUrl}" class="form-horizontal" htmlEscape="true" modelAttribute="nameRequest"
+            <form:form action="${unprotectedUrl}" class="form-horizontal" htmlEscape="true" modelAttribute="nameRequest"
                        method="POST">
 
                 <p><strong>Your token is ${_csrf.token}.</strong></p>
